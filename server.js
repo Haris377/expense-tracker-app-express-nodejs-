@@ -1,4 +1,5 @@
 const express = require('express')
+const uuid = require("uuid");
 // To make a var global
 const dotenv = require('dotenv')
 const colors = require('colors')
@@ -10,6 +11,12 @@ const transactions = require('./routes/transactions');
 
 //initialize express app
 const app = express();
+
+app.use(express.json());
+
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+}
 
 app.use('/api/v1/transactions', transactions);
 
