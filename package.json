@@ -12,13 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "colors": "^1.4.0",
-    "mongoose": "^5.9.29"
+    "mongoose": "^5.9.29",
+    "webpack": "^4.44.1"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "nodemon": "^2.0.4"
-  } 
+    "nodemon": "^2.0.4",
+    "react-scripts": "^3.4.3"
+  }
 }
