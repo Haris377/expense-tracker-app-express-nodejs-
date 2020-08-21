@@ -7,15 +7,15 @@ export const TransactionList = () => {
 
   useEffect(() => {
     getTransactions();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   return (
     <>
       <h3>History</h3>
       <ul id="list" className="list">
-        {transactions.map((transaction) => (
-          <Transaction key={transaction.id} transaction={transaction} />
+        {transactions.map((transaction, index) => (
+          <Transaction key={index} transaction={transaction} />
         ))}
       </ul>
     </>

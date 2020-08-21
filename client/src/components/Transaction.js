@@ -3,10 +3,9 @@ import { GlobalContext } from "../context/GlobalState";
 
 export const Transaction = ({transaction}) => {
     const { deleteTransaction } = useContext(GlobalContext);
-    console.log(transaction);
 
     const sign = transaction.amount < 0 ? '-' : '+';
-
+    console.log(transaction.amount)
   return (
       <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
         {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
